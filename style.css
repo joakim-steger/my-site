@@ -1,0 +1,38 @@
+html {
+    font-size: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header   header header    header"
+        ".      menu1    main   menu2     .     "
+        ".      footer   footer footer    .     ";
+    grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+header {
+    grid-area: header;
+    background-color: blue;
+}
+
+main {
+    grid-area: main;
+    background-color: blueviolet;
+}
+
+aside {
+    grid-area: menu1;
+    background-color: brown;
+}
+
+.rightAside {
+    grid-area: menu2;
+    background-color: red;
+}
+
+footer {
+    grid-area: footer;
+    background-color: green;
+}
